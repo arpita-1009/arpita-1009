@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>proplegit</title>
+
+
+<link href="static/fonts/fonts.css" rel="stylesheet"  type="text/css" media="all"/>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+
+<style>
+body {
+	background-color: #fff;
+}
+*[role="form"] {
+	max-width: 80%;
+	padding: 15px;
+	margin: 0 auto;
+	background-color: #fff;
+	border-radius: 0.3em;
+}
+*[role="form"] h2 {
+	margin-bottom: 1em;
+	margin-top: 20px;
+	text-align: center;
+}
+*[role="form"] h1 {
+	margin-bottom: 1em;
+	margin-top: 20px;
+	text-align: center;
+}
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: block;
+}
+audio, canvas, progress, video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+[hidden], template {
+ display: none;
+}
+a {
+	background-color: transparent;
+}
+a:active, a:hover {
+	outline: 0;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn {
+	font-style: italic;
+}
+h1 {
+	margin: .67em 0;
+	font-size: 2em;
+}
+mark {
+	color: #000;
+	background: #ff0;
+}
+small {
+	font-size: 80%;
+}
+sub, sup {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+sup {
+	top: -.5em;
+}
+sub {
+	bottom: -.25em;
+}
+img {
+	border: 0;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+figure {
+	margin: 1em 40px;
+}
+hr {
+	height: 0;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+pre {
+	overflow: auto;
+}
+code, kbd, pre, samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+button, input, optgroup, select, textarea {
+	margin: 0;
+	font: inherit;
+	color: inherit;
+}
+button {
+	overflow: visible;
+}
+button, select {
+	text-transform: none;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+button[disabled], html input[disabled] {
+	cursor: default;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+ padding: 0;
+ border: 0;
+}
+input {
+	line-height: normal;
+}
+input[type="checkbox"], input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+ height: auto;
+}
+input[type="search"] {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	-webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+ -webkit-appearance: none;
+}
+fieldset {
+	padding: .35em .625em .75em;
+	margin: 0 2px;
+	border: 1px solid #c0c0c0;
+}
+legend {
+	padding: 0;
+	border: 0;
+}
+textarea {
+	overflow: auto;
+}
+optgroup {
+	font-weight: bold;
+}
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+td, th {
+	padding: 0;
+}
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+@media print {
+*, *:before, *:after {
+	color: #000 !important;
+	text-shadow: none !important;
+	background: transparent !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+a, a:visited {
+	text-decoration: underline;
+}
+a[href]:after {
+	content: " (" attr(href) ")";
+}
+abbr[title]:after {
+	content: " (" attr(title) ")";
+}
+a[href^="#"]:after, a[href^="javascript:"]:after {
+	content: "";
+}
+pre, blockquote {
+	border: 1px solid #999;
+	page-break-inside: avoid;
+}
+thead {
+	display: table-header-group;
+}
+tr, img {
+	page-break-inside: avoid;
+}
+img {
+	max-width: 100% !important;
+}
+p, h2, h3 {
+	orphans: 3;
+	widows: 3;
+}
+h2, h3 {
+	page-break-after: avoid;
+}
+.navbar {
+	display: none;
+}
+.btn > .caret, .dropup > .btn > .caret {
+	border-top-color: #000 !important;
+}
+.label {
+	border: 1px solid #000;
+}
+.table {
+	border-collapse: collapse !important;
+}
+.table td, .table th {
+	background-color: #fff !important;
+}
+.table-bordered th, .table-bordered td {
+	border: 1px solid #ddd !important;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="canvas_div_pdf">
+  <table width="900" border="0" align="center" cellpadding="15" cellspacing="15" style="border:2px solid #000; padding:15px !important; border-radius:15px !important; background:#fff !important;">
+  <tr>
+    <td style="padding-left:30px; padding-right:30px; padding-bottom:15px; padding-top:30px; vertical-align:top;"><div style="width:100%;"> <img src="static/img/logo1.png" width="256" height="70" alt=""/>
+        <div style="float:left; width:100%; font-size:24px; font-family: 'RobotoCondensed-Regular'; color:#000; padding-bottom:5px; margin-top:25px;"> <b>Government Records Search Report</b> </div>
+      </div></td>
+    <td style="padding-right:0px; padding-bottom:15px; padding-top:15px;"><div style="float:left; width:100%;">
+        <div style="font-family: 'RobotoCondensed-Bold'; width:93%; float:right; color:#005baa; font-size:30px; padding:15px;">                                        <br/>
+        </div>
+        <div style="float:left; width:97%; font-size:16px; font-family: 'RobotoCondensed-Regular'; color:#000; font-weight:bold; padding-left:15px;">REPORTED: {{date}} </div>
+      </div></td>
+  </tr>
+  <tr>
+    <td colspan="2" ><div style="float:left; width:100%; border-bottom:2px solid #bcbec0; border-top:2px solid #bcbec0; margin-top:10px;">
+        <div style="width:400px; float:left; padding:10px; background:#e2e3e4; font-size:24px; color:#000; font-family: 'RobotoCondensed-Regular';"> Ownership Verification</div>
+      </div></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-left:15px; padding-right:15px;"><table width="100%" border="1" align="center" summary="table">
+          <td><table width="100%" border="1">
+              
+              <tr>
+                <td style="padding:15px; font-size:20px; font-family: 'RobotoCondensed-Regular'; color:#939598;">Name of Owner/s found</td>
+              </tr>
+              <tr>
+                <td style="padding:15px; font-size:20px; font-family: 'RobotoCondensed-Regular';">{{owner[6]}}</td>
+              </tr>
+            
+              <tr>
+                <td colspan="2"><table width="100%" border="1">
+                    <tr>
+                      <td style="padding:5px; font-size:20px; font-family: 'RobotoCondensed-Regular';  color:#939598; width:33%;">Total Number of
+                        Owners found:</td>
+                      <td style="padding:5px; font-size:24px; font-family: 'RobotoCondensed-Regular'; background:#ffefc6; font-weight:bold; width:10%; text-align:center;">1</td>
+                      <td style="padding:5px; font-size:20px; font-family: 'RobotoCondensed-Regular';  color:#939598; width:21%; text-align:center;">Total
+                        Area:</td>
+                      <td style="padding:5px; font-size:21px; font-family: 'RobotoCondensed-Regular'; background:#ffefc6; text-align:center;"><b>{{owner[4]}}</b><br/>
+                        sq. h/ac/mtr</td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-left:30px; padding-right:30px;"><div style="float:left; width:100%; margin-bottom:15px;">
+        <div style="width:93%; float:left; padding-left:65px; padding-right:15px; font-size:20px; color:#939598; font-family: 'RobotoCondensed-Regular';  position:relative; top:23px;"> iPVR System Remarks on Ownership Verification Information:</div>
+        <div style="width:95%; float:left; padding-left:15px; padding-right:15px; font-size:20px; color:#000; font-family: 'RobotoCondensed-Regular'; font-weight:bold; border-bottom:5px solid #d4d4d4; "><img src="static/img/bank.png" alt="" style="bottom: -10px;
+    position: relative;
+    left: -24px;"/></div>
+      </div>
+      <div style="font-size:18px;  font-family: 'RobotoCondensed-Regular'; margin-bottom:25px; width:100%; float:left;"> <span  style="float:left; margin-right:15px; margin-left:15px; width:3%;"><img src="static/img/tick.png" alt=""/></span> <span style="float:left; width:88%;"><b>Claimed Owner’s Name,</b> and co-borrowers names <b style="color:#00994d; font-size:18px;">appears</b> <b> in Government Land Record</b> as on: <b style="color:#00994d; font-size:20px;">{{owner[8]}}</b></span></div></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div style="float:left; width:100%; border-bottom:2px solid #bcbec0; border-top:2px solid #bcbec0;">
+        <div style="width:400px; float:left; padding:10px; background:#e2e3e4; font-size:20px; color:#000; font-family: 'RobotoCondensed-Regular'; "> Property Verification</div>
+      </div></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-left:30px; padding-right:30px;"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="36%"><div style="font-size:16px; color:#666; margin-bottom:15px;  font-family: 'RobotoCondensed-Regular'; padding-left:30px; margin-top:25px; font-weight:bold;">Location:</div></td>
+          <td width="28%"><div class="col-lg-2" style="font-size:16px; color:#666; margin-bottom:15px;  font-family: 'RobotoCondensed-Regular';  margin-top:25px;">Survey No. : <b style="color:#666;">{{owner[3]}}</b></div></td>
+          <td width="36%"><div style="font-size:16px; color:#666; margin-bottom:15px; margin-top:25px;  font-family: 'RobotoCondensed-Regular'; ">Total Land Size : <span style="color:#000;">{{owner[4]}}</span></div></td>
+        </tr>
+        <tr>
+          <td><div style="font-size:16px; color:#939598; margin-bottom:15px;  font-family: 'RobotoCondensed-Regular'; padding-left:30px;">Village: <span style="color:#000;">{{owner[2]}}</span></div></td>
+          <td><div class="col-lg-2" style="font-size:16px; color:#939598; margin-bottom:15px;  font-family: 'RobotoCondensed-Regular';">T.P. No : <b style="color:#666;">" "</b></div></td>
+          <td><div style="font-size:16px; color:#939598; margin-bottom:15px;  font-family: 'RobotoCondensed-Regular';">Use :<span style="color:#000;"> {{owner[9]}}</span></div></td>
+        </tr>
+        <tr>
+          <td><div style="font-size:16px; color:#939598; margin-bottom:15px;  font-family: 'RobotoCondensed-Regular'; padding-left:30px;">Taluka : <span style="color:#000;">{{owner[1]}}</span></div></td>
+          <td><div style="font-size:16px; color:#939598; margin-bottom:15px;  font-family: 'RobotoCondensed-Regular';">F.P. No:<b style="color:#666;">" "</b></div></td>
+        </tr>
+        <tr>
+          <td><div style="font-size:16px; color:#939598; margin-bottom:15px;  font-family: 'RobotoCondensed-Regular'; padding-left:30px;">District: <span style="color:#000;">{{owner[0]}}</span></div></td>
+        </tr>
+        <tr>
+          <td colspan="3"><table width="100%" border="0">
+          </td> 
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-left:30px; padding-right:30px;"><div style="float:left; width:100%; margin-bottom:25px;">
+        <div style="width:93%; float:left; padding-left:65px; padding-right:15px; font-size:20px; color:#939598; font-family: 'RobotoCondensed-Regular';  position:relative; top:23px;"> iPVR System Remarks on Property Verification Information:</div>
+        <div style="width:95%; float:left; padding-left:15px; padding-right:15px; font-size:20px; color:#000; font-family: 'RobotoCondensed-Regular'; font-weight:bold; border-bottom:5px solid #d4d4d4; "><img src="static/img/bank.png" alt="" style="bottom: -10px;
+    position: relative;
+    left: -24px;"/></div>
+      </div>
+      <div style="font-size:18px;  font-family: 'RobotoCondensed-Regular'; margin-bottom:15px; width:100%; float:left;"> <span  style="float:left; margin-right:15px; margin-left:15px; width:3%;"><img src="static/img/tick.png" alt=""/></span> <span style="float:left; width:88%;">Property verified with total area of <b>{{owner[4]}}</b> as per the latest government land records.</span></div></td>
+  </tr>
+  
+  
+  <tr>
+    <td colspan="2" style="padding-left:15px; padding-right:15px;">
+      
+      <div style="float:left; width:100%; margin-bottom:15px; padding-left:15px;">
+        
+        <div style="float:left; width:100%; margin-bottom:15px;">
+        <div style="width:93%; float:left; padding-left:65px; padding-right:15px; font-size:20px; color:#939598; font-family: 'RobotoCondensed-Regular';  position:relative; top:23px;"> iPVR System Remarks on Liens and Encumberances Information:</div>
+        <div style="width:95%; float:left; padding-left:15px; padding-right:15px; font-size:20px; color:#000; font-family: 'RobotoCondensed-Regular'; font-weight:bold; border-bottom:5px solid #d4d4d4; "><img src="static/img/bank.png" alt="" style="bottom: -10px;
+    position: relative;
+    left: -24px;"/></div>
+      </div>
+      </div>
+      <div style="font-size:18px;  font-family: 'RobotoCondensed-Regular'; margin-bottom:15px; width:98%; float:left; padding-left:15px; padding-right:15px;"> <span  style="float:left; margin-right:15px; margin-left:15px; width:3%;"><img src="static/img/information.png" alt=""/></span> <span style="float:left; width:88%;">{{owner[7]}}</span></div>
+
+      </td>
+  </tr>
+  
+ 
+ 
+  <tr>
+  <td colspan="2">
+  <div style="float:left; width:96%; margin-bottom:15px; padding-left:25px;">
+        
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div style="float:left; width:100%; border-bottom:2px solid #bcbec0; border-top:2px solid #bcbec0; margin-bottom:25px; margin-top:25px;">
+        <div style="width:400px; float:left; padding:10px; background:#e2e3e4; font-size:20px; color:#000; font-family: 'RobotoCondensed-Regular'; font-weight:bold; ">Recommendations</div>
+      </div>
+      <div style="font-size:18px;  font-family: 'RobotoCondensed-Regular'; margin-bottom:10px; float:left; padding-left:15px; padding-right:15px; width:97%;">iPVR System recommends best practies to avoid misjudgement and fraudulent transactions. <br/>You can request these services by clicking the buttons below:</div>
+      <div style="float:left; padding-left:25px; padding-right:25px; padding-top:10px; padding-bottom:10px; background:#f0f0f0; border:3px solid #a3af0d; border-radius:10px; font-size:20px; font-family: 'RobotoCondensed-Regular'; margin-left:15px; padding-right:15px; margin-top:10px; margin-bottom:10px; margin-right:15px; cursor:pointer;">CERSAI Search</div>
+      <div style="float:left; padding-left:25px; padding-right:25px; padding-top:10px; padding-bottom:10px; background:#f0f0f0; border:3px solid #a3af0d; border-radius:10px; font-size:20px; font-family: 'RobotoCondensed-Regular'; margin:10px; cursor:pointer;">Litigation Search</div>
+      <div style="float:left; padding-left:25px; padding-right:25px; padding-top:10px; padding-bottom:10px; background:#f0f0f0; border:3px solid #a3af0d; border-radius:10px; font-size:20px; font-family: 'RobotoCondensed-Regular'; margin:10px; cursor:pointer;">Registered Title Search</div>
+      <div style="float:left; padding-left:25px; padding-right:25px; padding-top:10px; padding-bottom:10px; background:#f0f0f0; border:3px solid #a3af0d; border-radius:10px; font-size:20px; font-family: 'RobotoCondensed-Regular'; margin:10px; cursor:pointer;">Property Valuation</div>      
+      <div style=" margin-top:15px; width:100%; float:left;">&nbsp;</div></td>
+  </tr>
+  </table>
+  
+</div>
+
+<table width="900" border="0" align="center">
+  <tr>
+    <td>
+      <div style="float:left; padding-left:25px; padding-right:25px; padding-top:10px; padding-bottom:10px; background:#f0f0f0; border:3px solid #a3af0d; border-radius:10px;  font-size:20px; font-family: 'RobotoCondensed-Regular'; margin:10px; cursor:pointer;"><a download='Blur.jpg' href = "{{path}}" >Blur PDF</a></div>
+
+      <input  type = "button" onclick="printFunction()" value = "Download iPVR" style=" float:left; padding-left:25px;  padding-right:25px; padding-top:10px; padding-bottom:10px; background:#f0f0f0; border:3px solid #a3af0d; border-radius:10px; font-size:20px; font-family: 'RobotoCondensed-Regular'; margin:10px; cursor:pointer;">
+      <script>
+            function printFunction() { 
+              window.print()
+              
+            }
+      </script>
+      <!-- <script>
+        function getPDF(){
+      
+          var HTML_Width = $(".canvas_div_pdf").width();
+          var HTML_Height = $(".canvas_div_pdf").height();
+          var top_left_margin = 15;
+          var PDF_Width = HTML_Width+(top_left_margin*2);
+          var PDF_Height = (PDF_Width*1.5)+(top_left_margin*2);
+          var canvas_image_width = HTML_Width;
+          var canvas_image_height = HTML_Height;
+          var totalPDFPages = Math.ceil(HTML_Height/PDF_Height)-1;
+          html2canvas($(".canvas_div_pdf")[0],{allowTaint:true}).then(function(canvas) {
+              canvas.getContext('2d');
+              console.log(canvas.height+"  "+canvas.width);
+              var imgData = canvas.toDataURL("image/jpeg", 1.0);
+              var pdf = new jsPDF('p', 'pt',  [PDF_Width, PDF_Height]);
+              pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin,canvas_image_width,canvas_image_height);
+              
+              
+              for (var i = 1; i <= totalPDFPages; i++) { 
+                  pdf.addPage(PDF_Width, PDF_Height);
+                  pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
+              }
+            pdf.save("712_iPVR.pdf");
+          });
+      };
+      </script> -->
+      <form action="/reload" method="post">
+        <span><input type="text" style = "visibility: hidden; float:left; " name="path" value = "{{path}}">
+        <button style="float:right; padding-left:25px; padding-right:25px; padding-top:10px; padding-bottom:10px; background:#f0f0f0; border:3px solid #a3af0d; border-radius:10px; font-size:20px; font-family: 'RobotoCondensed-Regular'; margin:10px; cursor:pointer;" type="submit" >Back</button></span>
+      </form>
+
+    <div style=" margin-top:15px; width:100%; float:left;">&nbsp;</div>
+      <div style="float:left; width:33.3%;  font-family: 'RobotoCondensed-Regular'; font-size:12px;"><a href="www.proplegit.com" style="color:#000; text-decoration:none;">www.proplegit.com</a> | <a href="mailto:info@proplegit.com" style="color:#000; text-decoration:none;">info@proplegit.com</a> | 8000336677</div>
+      <div style=" font-family: 'RobotoCondensed-Regular'; font-size:12px; text-align:center; float:left; width:33.3%; ">Sample Document#233PL</div>
+      <div style=" font-family: 'RobotoCondensed-Regular'; font-size:11px; float:left; width:33.3%; ">By Viewing this page you agree to our T&C. Standard Disclaimers Apply.</div>
+      <div style="border-top:2px solid #ccc; margin-top:15px; margin-bottom:10px; float:left; width:100%;"></div>
+      <div style="font-size:11px; float:left; width:100%; color:#666; padding-bottom:25px;"> <b style="padding-bottom:5px; float:left; width:100%;">PVR Partial Disclaimer in Brief:</b><br/>
+        <b style="padding-bottom:5px; float:left; width:100%;">Legitimacy and Recommendations of the PVR:</b><br/>
+        The iPVR and/or the Verification Report is generated by referring the latest available Information and / or Government Record as on the date of request and will be valid till the extent of the information available therein and till the referred Information and / or Government Record is not updated by the Government or relevant authorities. These referred documents are of dynamic nature and subject to change at any instant. The Information contained in this report is provided as a recommendatory service to the client, and does not constitute legal advice. It is also not intended to be used as a document for any legal issues. Recommendations herein are based on the analysis of the limited available inforation contained in the source and / or Government Record 
+        and the Public Platform issued Title Notices in certain number of past Years and referred, for the given Land/Property. <br/>
+        <b style="padding-bottom:5px; padding-top:5px; float:left; width:100%; float:left; width:100%;"> Investment / Lending / financial Risks:</b><br/>
+        This report is generated on request of the client, and provides preliminary information for consideration during any investment or lending or financial transaction decision. It is advisable to avail legal counsel or financial advisor before proceeding further.<br/>
+        <b style="padding-bottom:5px;  padding-top:5px; float:left; width:100%; float:left; width:100%;">Limitation of Liability:</b><br/>
+        PropLegit.com  or other associated and affiliated companies of PROPLEGIT GLOBAL PRIVATE LIMITED assume no liability as regards to any investment decision taken by the investor on the basis of this recommendation. In no event will PropLegit.com or other associated and affiliated companies of PROPLEGIT GLOBAL PRIVATE LIMITED be liable for direct, indirect or incidental, special or consequential damages / loss resulting from the investment information or recommendations in this publication or report. </div></td>
+  </tr>
+</table>
+<tr>
+  <td colspan="2"></td>
+</tr>
+
+</body>
+</html>

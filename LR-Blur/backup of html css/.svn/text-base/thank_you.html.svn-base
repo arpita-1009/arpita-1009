@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>!---EB5 INVESTMENT PROGRAM---!</title>
+<link href="css/bootstrap.css" rel="stylesheet"  type="text/css" media="all"/>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+body {
+    background-color: #eee;
+}
+
+*[role="form"] {
+    max-width: 500px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+    margin-bottom: 1em; margin-top:20px; text-align:center;
+}
+
+*[role="form"] h1 {
+    margin-bottom: 1em; margin-top:20px; text-align:center;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+            <form class="form-horizontal" role="form">
+           <!--  <h1>EB5 SEMINAR AND ROAD SHOW</h1>-->
+                <h2>Thank You, </h2>
+                <div class="col-sm-12">
+                <div class="col-sm-12"> <div class="form-group" style="text-align:justify;">
+                  <b> Your Appointment Request for EB5 Investment Program has been received by us.</b>
+<p>
+Meet us at :<br/><br/>
+<b>4th Floor,<br/>
+ESMSYS PVT LTD,<br/> 
+DDB MUDRA TOWER,<br/> 
+Shantisadan Society,<br/> 
+Ellisbridge, Ahmedabad-380006.</b></p>
+
+<p>
+EB5 is an Investment and a Job Creation Program by the United States. <b>Ashcroft Sullivan</b> is an authorized Regional Center by the USCIS for the states of Massachusetts, Rhode Island and Maryland and brings to you reliable projects with promising returns and guide you through the EB5 Visa Requirements with investments starting from USD 500,0000 onwards.</p>
+                </div></div>
+               </div>
+                <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="password" class="col-sm-12">Please tell us the reason to choose EB5 Investment Program to go to the United States?</label>
+                    <div class="col-sm-12">
+                    <textarea class="form-control" rows="2"></textarea>
+                       
+                    </div>
+                </div>
+                </div>
+                
+                <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="password" class="col-sm-12">How soon do you plan to invest in EB5 ?</label>
+                    <div class="col-sm-12">
+                  
+                    <!--<label for="password" class="col-sm-3 control-label">Password</label>-->
+                 
+                        <select id="country" class="form-control">
+                            <option>Select</option>
+                            <option>Within 3 months</option>
+                            <option>Within 6 months</option>
+                            <option>Within one year</option>
+                            <option>More than one year</option>
+                        </select>
+                   
+                       
+                    </div>
+                </div>
+                </div>
+                
+                <!--<div class="col-sm-12">
+                <div class="form-group">
+                    <label for="password" class="col-sm-12">How many members are there in your family ?</label>
+                    <div class="col-sm-12">
+                  
+                     <input type="text" id="password" placeholder="Pincode" class="form-control">
+                   
+                       
+                    </div>
+                </div>
+                </div>-->
+                
+                <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="password" class="col-sm-12">Please let us know if you would want us to answer any specific question :</label>
+                    <div class="col-sm-12">
+                  
+                    <textarea class="form-control" rows="2"></textarea>
+                   
+                       
+                    </div>
+                </div>
+                </div>
+                
+                <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="password" class="col-sm-12">Have you met an EB5 expert or been at an EB5 event ?</label>
+                  <div class="col-sm-12">
+                  
+                    
+                     <label class="radio-inline"><input type="radio" name="optradio">YES</label>
+<label class="radio-inline"><input type="radio" name="optradio">NO</label>
+                  
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="password" class="col-sm-12">I am submitting this appointment request for my                        </label>
+                  <div class="col-sm-12">
+                  
+                    <p>
+                     <select id="country" class="form-control">
+                            <option>Select</option>
+                            <option>Child</option>
+                            <option>Friend</option>
+                            <option>Partner</option>
+                            <option>Patient</option>
+                        </select>
+                    </p>
+                    </div>
+                </div>
+                </div>
+                
+              
+                
+                <!--<div class="form-group">
+                    <label for="country" class="col-sm-3 control-label">Country</label>
+                    <div class="col-sm-9">
+                        <select id="country" class="form-control">
+                            <option>Afghanistan</option>
+                            <option>Bahamas</option>
+                            <option>Cambodia</option>
+                            <option>Denmark</option>
+                            <option>Ecuador</option>
+                            <option>Fiji</option>
+                            <option>Gabon</option>
+                            <option>Haiti</option>
+                        </select>
+                    </div>
+                </div>-->
+              
+                <!--<div class="form-group">
+                    <label class="control-label col-sm-3">Meal Preference</label>
+                    <div class="col-sm-9">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="calorieCheckbox" value="Low calorie">Low calorie
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="saltCheckbox" value="Low salt">Low salt
+                            </label>
+                        </div>
+                    </div>
+                </div>--> <!-- /.form-group -->
+
+          
+         <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <a  href="submit_answer.html" class="btn btn-primary btn-block">SUBMIT</a>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maps Proplegit</title>
+    <style>
+        #map_canvas {
+            width: 100%;
+            height: 650px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map_canvas"></div>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADP5axSFIf69KNsCzDZcve394FUWnjv7s&callback=initMap&v=weekly"></script>
+    <script>var map; var src = 'http://127.0.0.1:3000/{{path_kml}}';
+    /*** Initializes the map and calls the function that creates polylines.*/function initialize() { map = new google.maps.Map(document.getElementById('map_canvas'), { zoom: -3, mapTypeId: google.maps.MapTypeId.HYBRID }); loadKmlLayer(src, map); } function loadKmlLayer(src, map) { var kmlLayer = new google.maps.KmlLayer(src, { suppressInfoWindows: true, preserveViewport: false, map: map }); google.maps.event.addListener(kmlLayer, 'click', function (event) { var content = event.featureData.infoWindowHtml; var testimonial = document.getElementById('capture'); testimonial.innerHTML = content; }); } google.maps.event.addDomListener(window, 'load', initialize);</script>
+    <span class="input-group-addon" Style="font-size : 12pt">Download Image :</span>
+    <a download="Naksha" href='{{path_jpg}}' title='Download Image '><input type="button" value="Download"></a>
+    <p>{{output}}</p>
+    
+</body>
+
+</html>

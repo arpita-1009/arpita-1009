@@ -1,0 +1,64 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<head>
+  <style type="text/css">
+    div {
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var counter = 1;
+      $("#addButton").click(function () {
+        
+        var newTextBoxDiv = $(document.createElement('div')).attr("id", 'TextBoxDiv' + counter);
+        newTextBoxDiv.after().html('<label>lat' + counter + ' : </label>' + '<input type="text" name="lat' + counter + '" id="textbox' + counter + '" value="" >'+' <label>long' + counter + ' : </label>' + '<input type="text" name="long' + counter + '" id="textbox' + counter + '" value="" >');
+         newTextBoxDiv.appendTo("#TextBoxesGroup");
+
+        
+        
+        counter++;
+        $("#getButtonValue").val(counter);
+
+      });
+      $("#removeButton").click(function () {
+        if (counter == 1) {
+          alert("No more textbox to remove");
+          return false;
+        }
+        counter--;
+        $("#TextBoxDiv" + counter).remove();
+        
+        $("#getButtonValue").val(counter);
+        
+        
+      });
+
+      
+    });
+
+  </script>
+  </head>
+
+  <body>
+    <form action="/" method="post">
+      <div id='TextBoxesGroup'>
+        <label>Zone :-</label>
+        <input type="text" placeholder="enter zone.." name="zone" required>
+        <br>
+        <div id="TextBoxDiv0"> <label>lat : </label><input type='textbox' id='textbox0' name="lat0">
+        <label>long : </label><input type='textbox' id='textbox0' name="long0"> </div>
+      </div>
+      <input type='button' value='Add Button' id='addButton'>
+      <input type='button' value='Remove Button' id='removeButton'>
+
+      <input type="text" id='getButtonValue' value="1" name ="counter" readonly>
+      <br>
+      <br>
+      <input type="submit" class="btn btn-info" name="submit" value="submit" />
+    </form>
+  </body>
+
+</html>

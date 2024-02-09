@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>!---EB5 INVESTMENT PROGRAM---!</title>
+<link href="css/bootstrap.css" rel="stylesheet"  type="text/css" media="all"/>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+body {
+    background-color: #eee;
+}
+
+*[role="form"] {
+    max-width: 500px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+    margin-bottom: 1em; margin-top:20px; text-align:center;
+}
+
+*[role="form"] h1 {
+    margin-bottom: 1em; margin-top:20px; text-align:center;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+            <form class="form-horizontal" role="form">
+            <img src="img/eb5_registration_header.png" alt=""/>
+             <h1>EB5 INVESTMENT PROGRAM</h1>
+                <h2>Appointment Schedule Form</h2>
+                <div class="col-sm-12">
+                <div class="col-sm-12"> <div class="form-group">
+                    <!--<label for="firstName" class="col-sm-3 control-label">Full Name</label>-->
+                   
+                        <input type="text" id="firstName" placeholder="Full Name*" class="form-control" autofocus>
+                        <!--<span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>-->
+                    
+                </div></div>
+               </div>
+                <div class="col-sm-4">
+                <div class="col-sm-12">
+                <div class="form-group">
+                    <!--<label for="email" class="col-sm-3 control-label">Email</label>-->
+                 
+                        <input type="text" id="email" placeholder="Mobile Number*" class="form-control">
+                    
+                </div></div>
+                </div>
+                <div class="col-sm-8">
+                <div class="col-sm-12">
+                <div class="form-group">
+                    <!--<label for="email" class="col-sm-3 control-label">Email</label>-->
+                    
+                        <input type="text" id="email" placeholder="Email" class="form-control">
+                   
+                </div>
+                </div>
+                </div>
+              
+                
+                
+                <!--<div class="form-group">
+                    <label class="control-label col-sm-3">Gender</label>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="femaleRadio" value="WhatsApp">WhatsApp
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="maleRadio" value="Viber">Viber
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="uncknownRadio" value="WeChat">WeChat
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="col-sm-12">
+                <div class="form-group">
+                    <!--<label for="password" class="col-sm-3 control-label">Password</label>-->
+                    <div class="col-sm-12">
+                    <textarea class="form-control" rows="2" placeholder="Address/comment"></textarea>
+                       
+                    </div>
+                </div>
+                </div>
+              
+                <!--<div class="col-sm-6">
+                <div class="col-sm-12">
+                <div class="form-group">
+                    <!--<label for="password" class="col-sm-3 control-label">Password</label>--
+                 
+                        <select id="country" class="form-control">
+                            <option>City</option>
+                            <option>AHMEDABAD</option>
+                            <option>RAJKOT</option>
+                            <option>UNJHA/MEHSANA</option>
+                            <option>ANAND</option>
+                            <option>BARODA</option>
+                            <option>SURAT</option>
+                           
+                        </select>
+                   </div>
+                   </div>
+                   </div>-->
+                
+                  
+                 <!--<div class="col-sm-6">
+                 <div class="col-sm-12">
+                 <div class="form-group">
+                    <!--<label for="password" class="col-sm-3 control-label">Password</label>--
+                   
+                        <input type="text" id="password" placeholder="Pincode" class="form-control">
+                 
+                </div>
+                </div></div>-->
+            
+      
+                
+               
+                
+                
+                
+                <!--<div class="form-group">
+                    <label for="country" class="col-sm-3 control-label">Country</label>
+                    <div class="col-sm-9">
+                        <select id="country" class="form-control">
+                            <option>Afghanistan</option>
+                            <option>Bahamas</option>
+                            <option>Cambodia</option>
+                            <option>Denmark</option>
+                            <option>Ecuador</option>
+                            <option>Fiji</option>
+                            <option>Gabon</option>
+                            <option>Haiti</option>
+                        </select>
+                    </div>
+                </div>-->
+              
+                <!--<div class="form-group">
+                    <label class="control-label col-sm-3">Meal Preference</label>
+                    <div class="col-sm-9">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="calorieCheckbox" value="Low calorie">Low calorie
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="saltCheckbox" value="Low salt">Low salt
+                            </label>
+                        </div>
+                    </div>
+                </div>--> <!-- /.form-group -->
+                
+
+
+          
+          
+
+             <div class="col-lg-12">
+             <h4>Please select when you would like to meet us :</h4>
+        	 
+        <h4>What days works best for you:</h4>
+        <div class="row">
+        <div class="col-sm-3"><label class="checkbox-inline"><input type="checkbox" value="">Monday</label>
+
+</div>
+         <div class="col-sm-3"><label class="checkbox-inline"><input type="checkbox" value="">Tuesday</label></div>
+          <div class="col-sm-3"><label class="checkbox-inline"><input type="checkbox" value="">Wednesday</label></div>
+           <div class="col-sm-3"><label class="checkbox-inline"><input type="checkbox" value="">Thursday</label></div>
+            <div class="col-sm-3"><label class="checkbox-inline"><input type="checkbox" value="">Friday</label></div>
+             <div class="col-sm-3"><label class="checkbox-inline"><input type="checkbox" value="">Saturday </label></div>
+              <div class="col-sm-3"><label class="checkbox-inline"><input type="checkbox" value="">Sunday</label></div>
+        
+      </div>
+      <h4>What times works best for you :</h4>
+        <div class="row">
+        <div class="col-sm-4"><label class="checkbox-inline"><input type="checkbox" value="">Morning </label>
+
+</div>
+         <div class="col-sm-4"><label class="checkbox-inline"><input type="checkbox" value="">Afternoon</label></div>
+          <div class="col-sm-4"><label class="checkbox-inline"><input type="checkbox" value="">Evening</label></div>
+          
+        
+      </div>
+     
+      <h4>Any Specific Date/Time?</h4>
+        <div class="row">
+        <div class="col-sm-6"> <input type="text" id="email" placeholder="Date" class="form-control">
+
+</div>
+         <div class="col-sm-6"> <input type="text" id="email" placeholder="Time" class="form-control"></div>
+          
+        
+      </div>
+      </div>
+       
+
+          <div class="col-sm-12"><div class="form-group">
+                    <div class="col-sm-12">
+                        <!--<div class="checkbox">
+                            <label>
+                                <input type="checkbox">I accept <a href="#">terms</a>
+                            </label>
+                        </div>-->
+                    </div>
+                </div></div>
+         <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <a href="thank_you.html" class="btn btn-primary btn-block">Schedule Appointment</a>
+                    </div>
+                    <div class="col-sm-12"><span style="padding-top:15px; float:left; width:100%;">Questions ?
+Call us at 9825150532 now!</span>
+</div>
+                </div>
+                
+            </form>
+        </div>
+</body>
+</html>

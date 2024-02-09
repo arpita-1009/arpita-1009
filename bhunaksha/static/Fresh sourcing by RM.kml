@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="1">
+        <Style id="4">
+            <LineStyle id="5">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>2</width>
+            </LineStyle>
+        </Style>
+        <Placemark id="3">
+            <name>Pathway</name>
+            <description>A pathway in MH</description>
+            <styleUrl>#4</styleUrl>
+            <LineString id="2">
+                <coordinates>77.11505,32.02178,0.0 77.11514,32.02118,0.0 77.11505,32.02178,0.0 77.11514,32.02121,0.0 77.11505,32.02178,0.0</coordinates>
+            </LineString>
+        </Placemark>
+    </Document>
+</kml>

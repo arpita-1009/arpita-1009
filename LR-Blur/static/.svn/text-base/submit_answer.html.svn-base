@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>!---EB5 INVESTMENT PROGRAM---!</title>
+<link href="css/bootstrap.css" rel="stylesheet"  type="text/css" media="all"/>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+body {
+    background-color: #eee;
+}
+
+*[role="form"] {
+    max-width: 500px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+    margin-bottom: 1em; margin-top:20px; text-align:center;
+}
+
+*[role="form"] h1 {
+    margin-bottom: 1em; margin-top:20px; text-align:center;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+            <form class="form-horizontal" role="form">
+           <!--  <h1>EB5 SEMINAR AND ROAD SHOW</h1>-->
+                <h2>Thank You, </h2>
+                <div class="col-sm-12">
+                <div class="col-sm-12"> <div class="form-group" style="text-align:justify;">
+                  <b>Your form has been submitted successfully, you will receive a text message very soon with the confirmation of appointment date/time and location.</b>
+                  <p>
+We look forward to meeting you on: <b>{date}</b> at <b>{time}</b></p>
+<p style="color:#337ab7; font-size:16px;">
+4th floor,<br/>
+ESMSYS PVT LTD,<br/> 
+DDB MUDRA TOWER, <br/>
+Shantisadan Society,<br/>
+Ellis Bridge, Ahmedabad-380006. <br/>
+<b>Phone: 9825150532</b>
+
+</p>
+<!--<p>
+<b>Would you like a SMS Reminder two hours before the event ?</b></p>-->
+<!--<p>
+  <label>
+    <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_0" />&nbsp;&nbsp;
+   Yes</label>&nbsp;&nbsp;
+    <label>
+    <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_1" />&nbsp;&nbsp;
+     No</label>
+  <br />
+</p>-->
+                </div></div>
+               </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+              
+                
+                <!--<div class="form-group">
+                    <label for="country" class="col-sm-3 control-label">Country</label>
+                    <div class="col-sm-9">
+                        <select id="country" class="form-control">
+                            <option>Afghanistan</option>
+                            <option>Bahamas</option>
+                            <option>Cambodia</option>
+                            <option>Denmark</option>
+                            <option>Ecuador</option>
+                            <option>Fiji</option>
+                            <option>Gabon</option>
+                            <option>Haiti</option>
+                        </select>
+                    </div>
+                </div>-->
+              
+                <!--<div class="form-group">
+                    <label class="control-label col-sm-3">Meal Preference</label>
+                    <div class="col-sm-9">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="calorieCheckbox" value="Low calorie">Low calorie
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="saltCheckbox" value="Low salt">Low salt
+                            </label>
+                        </div>
+                    </div>
+                </div>--> <!-- /.form-group -->
+
+          
+         <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <span class="bg-primary" style="padding-top:7px; padding-bottom:7px; width:100%; float:left; border-radius:5px;">&nbsp;</span>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+</body>
+</html>
